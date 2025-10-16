@@ -1,19 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int inc(int counter);
+int counter;
 
-int main(int argc, char * argv[])
+void set_counter()
 {
-    int i = 10;
-    printf("함수 호출 전 i = %d\n", i);
-    i = inc(i);
-    printf("함수 호출 후 i = %d\n", i);
-    return 0;
+    counter = 20;
 }
 
-int inc(int counter)
+int main(int argc, char *argv[])
 {
-    counter++;
-    return counter;
+    printf("counter = %d\n", counter);
+    set_counter();
+    printf("counter = %d\n", counter);
+    
+    system("PAUSE");
+    return 0;
 }
